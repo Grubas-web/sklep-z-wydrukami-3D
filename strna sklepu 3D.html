@@ -1,0 +1,592 @@
+<html lang="pl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintZone 3D - Twój sklep z wydrukami 3D</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(#3b82f6 0.5px, transparent 0.5px), radial-gradient(#3b82f6 0.5px, #0f172a 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1), 0 8px 10px -6px rgba(59, 130, 246, 0.1);
+        }
+        .custom-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-50{z-index:50}.order-1{order:1}.order-2{order:2}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:0.5rem}.ml-3{margin-left:0.75rem}.ml-4{margin-left:1rem}.mr-2{margin-right:0.5rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-12{height:3rem}.h-16{height:4rem}.h-3\/4{height:75%}.h-4{height:1rem}.h-48{height:12rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-64{height:16rem}.h-8{height:2rem}.h-full{height:100%}.w-12{width:3rem}.w-3\/4{width:75%}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-8{width:2rem}.w-full{width:100%}.max-w-7xl{max-width:80rem}.max-w-md{max-width:28rem}.flex-shrink-0{flex-shrink:0}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b-2{border-bottom-width:2px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-blue-400{--tw-border-opacity:1;border-color:rgb(96 165 250 / var(--tw-border-opacity, 1))}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.border-blue-600{--tw-border-opacity:1;border-color:rgb(37 99 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-yellow-400{--tw-bg-opacity:1;background-color:rgb(250 204 21 / var(--tw-bg-opacity, 1))}.bg-opacity-50{--tw-bg-opacity:0.5}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.pb-3{padding-bottom:0.75rem}.pb-6{padding-bottom:1.5rem}.pl-1{padding-left:0.25rem}.pl-3{padding-left:0.75rem}.pr-4{padding-right:1rem}.pt-1{padding-top:0.25rem}.pt-2{padding-top:0.5rem}.pt-5{padding-top:1.25rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.text-blue-100{--tw-text-opacity:1;color:rgb(219 234 254 / var(--tw-text-opacity, 1))}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-90{opacity:0.9}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.focus-within\:outline-none:focus-within{outline:2px solid transparent;outline-offset:2px}.focus-within\:ring-2:focus-within{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus-within\:ring-blue-500:focus-within{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}.focus-within\:ring-offset-2:focus-within{--tw-ring-offset-width:2px}.hover\:border-blue-500:hover{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.hover\:border-gray-300:hover{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.hover\:bg-blue-400:hover{--tw-bg-opacity:1;background-color:rgb(96 165 250 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-50:hover{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:text-blue-500:hover{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.hover\:text-blue-800:hover{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.hover\:text-gray-500:hover{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-inset:focus{--tw-ring-inset:inset}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:mb-0{margin-bottom:0px}.md\:ml-6{margin-left:1.5rem}.md\:flex{display:flex}.md\:hidden{display:none}.md\:h-80{height:20rem}.md\:w-80{width:20rem}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.md\:py-24{padding-top:6rem;padding-bottom:6rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 1024px){.lg\:order-1{order:1}.lg\:order-2{order:2}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <!-- Zmodyfikowane logo -->
+                        <svg class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L4 6V18L12 22L20 18V6L12 2Z" fill="currentColor" fill-opacity="0.7"></path>
+                            <path d="M12 2L4 6V18L12 22L20 18V6L12 2Z" stroke="currentColor" stroke-width="1.5"></path>
+                            <path d="M12 2V22M4 6L20 18M20 6L4 18" stroke="currentColor" stroke-width="1"></path>
+                            <circle cx="12" cy="12" r="3" fill="currentColor"></circle>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-gray-900">PrintZone 3D</span>
+                    </div>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="#" class="border-b-2 border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            Strona główna
+                        </a>
+                        <a href="#products" class="border-transparent border-b-2 hover:border-blue-500 text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            Gotowe wydruki
+                        </a>
+                        <a href="#custom" class="border-transparent border-b-2 hover:border-blue-500 text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            Własny projekt
+                        </a>
+                        <a href="#about" class="border-transparent border-b-2 hover:border-blue-500 text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            O nas
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">
+                        Koszyk (0)
+                    </button>
+                    <div class="ml-3 md:hidden">
+                        <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#" class="bg-blue-50 border-l-4 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 text-base font-medium">
+                    Strona główna
+                </a>
+                <a href="#products" class="border-transparent border-l-4 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">
+                    Gotowe wydruki
+                </a>
+                <a href="#custom" class="border-transparent border-l-4 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">
+                    Własny projekt
+                </a>
+                <a href="#about" class="border-transparent border-l-4 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">
+                    O nas
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="text-white">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Twoje pomysły, nasze wydruki 3D</h1>
+                    <p class="text-lg md:text-xl mb-8 text-blue-100">Zamów gotowe produkty lub prześlij własny projekt, a my go wydrukujemy z najwyższą precyzją i jakością.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#products" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-base font-medium transition duration-300 text-center">
+                            Przeglądaj produkty
+                        </a>
+                        <a href="#custom" class="bg-transparent border-2 border-blue-400 hover:bg-blue-400 hover:text-white text-blue-300 px-6 py-3 rounded-md text-base font-medium transition duration-300 text-center">
+                            Wyślij swój projekt
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80">
+                        <!-- Zmodyfikowane logo 3D -->
+                        <svg class="w-full h-full text-blue-500 opacity-90" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M100,20 L180,70 L180,130 L100,180 L20,130 L20,70 Z"></path>
+                            <path fill="#0f172a" d="M100,40 L160,80 L160,120 L100,160 L40,120 L40,80 Z"></path>
+                            <path fill="currentColor" d="M100,20 L100,180 M20,70 L180,130 M20,130 L180,70" stroke="currentColor" stroke-width="2"></path>
+                            <circle cx="100" cy="100" r="20" fill="white" opacity="0.7"></circle>
+                            <circle cx="100" cy="20" r="5" fill="white"></circle>
+                            <circle cx="180" cy="70" r="5" fill="white"></circle>
+                            <circle cx="180" cy="130" r="5" fill="white"></circle>
+                            <circle cx="100" cy="180" r="5" fill="white"></circle>
+                            <circle cx="20" cy="130" r="5" fill="white"></circle>
+                            <circle cx="20" cy="70" r="5" fill="white"></circle>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <div class="text-xl font-bold">3D</div>
+                                <div class="text-sm">Printing</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Dlaczego warto wybrać nasze usługi?</h2>
+                <p class="mt-4 text-lg text-gray-600">Oferujemy kompleksowe rozwiązania w zakresie druku 3D</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 rounded-xl p-6 custom-shadow">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Wysoka jakość</h3>
+                    <p class="text-gray-600">Korzystamy z najnowszych drukarek 3D i materiałów najwyższej jakości, aby zapewnić doskonałe rezultaty.</p>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-6 custom-shadow">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Szybka realizacja</h3>
+                    <p class="text-gray-600">Większość zamówień realizujemy w ciągu 2-5 dni roboczych, w zależności od złożoności projektu.</p>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-6 custom-shadow">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Przystępne ceny</h3>
+                    <p class="text-gray-600">Oferujemy konkurencyjne ceny i rabaty dla stałych klientów oraz przy większych zamówieniach.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div id="products" class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Gotowe wydruki 3D</h2>
+                <p class="mt-4 text-lg text-gray-600">Wybierz spośród naszych popularnych produktów</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="h-48 bg-gray-200 relative">
+                        <svg class="w-full h-full text-blue-600" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M50,20 L80,35 L80,65 L50,80 L20,65 L20,35 Z" opacity="0.7"></path>
+                            <path fill="none" stroke="currentColor" stroke-width="2" d="M50,20 L80,35 L80,65 L50,80 L20,65 L20,35 Z"></path>
+                            <path fill="none" stroke="currentColor" stroke-width="1" d="M50,20 L50,80 M20,35 L80,65 M20,65 L80,35"></path>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Figurka superbohatera</h3>
+                        <p class="text-gray-600 text-sm mb-3">Wysokiej jakości figurka, idealna na prezent</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">79,99 zł</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition duration-300">
+                                Dodaj do koszyka
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="h-48 bg-gray-200 relative">
+                        <svg class="w-full h-full text-green-600" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M30,20 C15,20 15,50 30,50 C15,50 15,80 30,80 C45,80 85,65 85,50 C85,35 45,20 30,20 Z" opacity="0.7"></path>
+                            <path fill="none" stroke="currentColor" stroke-width="2" d="M30,20 C15,20 15,50 30,50 C15,50 15,80 30,80 C45,80 85,65 85,50 C85,35 45,20 30,20 Z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Doniczka geometryczna</h3>
+                        <p class="text-gray-600 text-sm mb-3">Nowoczesna doniczka z geometrycznym wzorem</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">49,99 zł</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition duration-300">
+                                Dodaj do koszyka
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="h-48 bg-gray-200 relative">
+                        <svg class="w-full h-full text-purple-600" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M50,20 A30,30 0 1,0 50,80 A30,30 0 1,0 50,20 Z" opacity="0.7"></path>
+                            <path fill="none" stroke="currentColor" stroke-width="2" d="M50,20 A30,30 0 1,0 50,80 A30,30 0 1,0 50,20 Z"></path>
+                            <path fill="none" stroke="currentColor" stroke-width="1" d="M30,50 L70,50 M50,30 L50,70"></path>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Stojak na telefon</h3>
+                        <p class="text-gray-600 text-sm mb-3">Praktyczny stojak na smartfon</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">29,99 zł</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition duration-300">
+                                Dodaj do koszyka
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="h-48 bg-gray-200 relative">
+                        <svg class="w-full h-full text-red-600" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M20,40 L50,20 L80,40 L80,70 L50,90 L20,70 Z" opacity="0.7"></path>
+                            <path fill="none" stroke="currentColor" stroke-width="2" d="M20,40 L50,20 L80,40 L80,70 L50,90 L20,70 Z"></path>
+                            <path fill="none" stroke="currentColor" stroke-width="1" d="M50,20 L50,90 M20,40 L80,40"></path>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Organizer na biurko</h3>
+                        <p class="text-gray-600 text-sm mb-3">Funkcjonalny organizer na przybory biurowe</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">59,99 zł</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition duration-300">
+                                Dodaj do koszyka
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button class="bg-white border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-2 rounded-md text-base font-medium transition duration-300">
+                    Zobacz więcej produktów
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Project Section -->
+    <div id="custom" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Wyślij swój projekt do wydruku</h2>
+                <p class="mt-4 text-lg text-gray-600">Masz własny projekt? Wydrukujemy go dla Ciebie!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="bg-blue-50 rounded-xl p-8 custom-shadow">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Formularz zamówienia</h3>
+                        <form id="custom-order-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Imię i nazwisko</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefon</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="material" class="block text-sm font-medium text-gray-700 mb-1">Materiał</label>
+                                <select id="material" name="material" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Wybierz materiał</option>
+                                    <option value="pla">PLA</option>
+                                    <option value="abs">ABS</option>
+                                    <option value="petg">PETG</option>
+                                    <option value="tpu">TPU (elastyczny)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="color" class="block text-sm font-medium text-gray-700 mb-1">Kolor</label>
+                                <select id="color" name="color" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Wybierz kolor</option>
+                                    <option value="white">Biały</option>
+                                    <option value="black">Czarny</option>
+                                    <option value="gray">Szary</option>
+                                    <option value="red">Czerwony</option>
+                                    <option value="blue">Niebieski</option>
+                                    <option value="green">Zielony</option>
+                                    <option value="yellow">Żółty</option>
+                                    <option value="orange">Pomarańczowy</option>
+                                    <option value="purple">Fioletowy</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="file" class="block text-sm font-medium text-gray-700 mb-1">Plik projektu (STL, OBJ, 3MF)</label>
+                                <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                                    <div class="space-y-1 text-center">
+                                        <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+                                            <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <div class="flex text-sm text-gray-600">
+                                            <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                                                <span>Prześlij plik</span>
+                                                <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                            </label>
+                                            <p class="pl-1">lub przeciągnij i upuść</p>
+                                        </div>
+                                        <p class="text-xs text-gray-500">
+                                            Maksymalny rozmiar: 50MB
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="comments" class="block text-sm font-medium text-gray-700 mb-1">Dodatkowe uwagi</label>
+                                <textarea id="comments" name="comments" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                            <div class="pt-2">
+                                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-base font-medium transition duration-300">
+                                    Wyślij zapytanie
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2">
+                    <div class="space-y-6">
+                        <div class="bg-blue-100 rounded-xl p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Jak to działa?</h3>
+                            <ol class="space-y-4">
+                                <li class="flex">
+                                    <div class="flex-shrink-0 h-8 w-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">1</div>
+                                    <div class="ml-4">
+                                        <p class="text-gray-700">Prześlij swój projekt w formacie STL, OBJ lub 3MF</p>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="flex-shrink-0 h-8 w-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">2</div>
+                                    <div class="ml-4">
+                                        <p class="text-gray-700">Otrzymasz wycenę w ciągu 24 godzin</p>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="flex-shrink-0 h-8 w-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">3</div>
+                                    <div class="ml-4">
+                                        <p class="text-gray-700">Po akceptacji wyceny i dokonaniu płatności rozpoczynamy druk</p>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="flex-shrink-0 h-8 w-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">4</div>
+                                    <div class="ml-4">
+                                        <p class="text-gray-700">Wysyłamy gotowy wydruk lub informujemy o możliwości odbioru osobistego</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="bg-gray-100 rounded-xl p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Dostępne materiały</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 rounded-full bg-blue-600 mr-2"></div>
+                                    <span>PLA (standardowy)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 rounded-full bg-gray-800 mr-2"></div>
+                                    <span>ABS (wytrzymały)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 rounded-full bg-green-600 mr-2"></div>
+                                    <span>PETG (odporny)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 rounded-full bg-yellow-400 mr-2"></div>
+                                    <span>TPU (elastyczny)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 rounded-full bg-purple-600 mr-2"></div>
+                                    <span>Żywica (narazie niedostępny)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about" class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">O nas</h2>
+                <p class="mt-4 text-lg text-gray-600">Poznaj naszą firmę i technologię</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="aspect-w-16 aspect-h-9 bg-blue-100 rounded-xl overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <svg class="w-3/4 h-3/4 text-blue-600" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" d="M100,20 L180,70 L180,130 L100,180 L20,130 L20,70 Z" opacity="0.2"></path>
+                                <path fill="none" stroke="currentColor" stroke-width="4" d="M100,20 L180,70 L180,130 L100,180 L20,130 L20,70 Z"></path>
+                                <path fill="none" stroke="currentColor" stroke-width="2" d="M100,20 L100,180 M20,70 L180,130 M20,130 L180,70"></path>
+                                <circle cx="100" cy="20" r="5" fill="currentColor"></circle>
+                                <circle cx="180" cy="70" r="5" fill="currentColor"></circle>
+                                <circle cx="180" cy="130" r="5" fill="currentColor"></circle>
+                                <circle cx="100" cy="180" r="5" fill="currentColor"></circle>
+                                <circle cx="20" cy="130" r="5" fill="currentColor"></circle>
+                                <circle cx="20" cy="70" r="5" fill="currentColor"></circle>
+                                <text x="100" y="110" text-anchor="middle" font-size="16" font-weight="bold" fill="currentColor">PrintZone 3D</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Nasza historia</h3>
+                    <p class="text-gray-700 mb-4">
+                        PrintZone 3D to firma założona z pasji do nowoczesnych technologii i druku 3D. Planujemy rozpocząć działalność w 2025 roku, dostarczając najwyższej jakości wydruki 3D dla klientów indywidualnych i firm.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Nasz zespół składa się z doświadczonych projektantów i techników, którzy z zaangażowaniem podchodzą do każdego projektu. Korzystamy z najnowocześniejszych drukarek 3D i materiałów, aby zapewnić najlepsze rezultaty.
+                    </p>
+                    
+                    <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                        Dowiedz się więcej o nas
+                        <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section Removed -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-blue-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L4 6V18L12 22L20 18V6L12 2Z" fill="currentColor" fill-opacity="0.7"></path>
+                            <path d="M12 2L4 6V18L12 22L20 18V6L12 2Z" stroke="currentColor" stroke-width="1.5"></path>
+                            <path d="M12 2V22M4 6L20 18M20 6L4 18" stroke="currentColor" stroke-width="1"></path>
+                            <circle cx="12" cy="12" r="3" fill="currentColor"></circle>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold">PrintZone 3D</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Twój partner w świecie druku 3D. Oferujemy profesjonalne usługi druku 3D dla klientów indywidualnych i firm.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="mailto:kontakt@printzone3d.pl" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                            </svg>
+                        </a>
+                        <!-- Dodany link do Instagrama -->
+                        <a href="https://www.instagram.com/printzone3d" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Produkty</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Figurki</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Gadżety</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Części zamienne</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Dekoracje</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Biżuteria</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Usługi</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Druk 3D</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Modelowanie 3D</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Skanowanie 3D</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Konsultacje</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Szkolenia</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © 2025 PrintZone 3D. Wszelkie prawa zastrzeżone.
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="text-gray-400 hover:text-white text-sm mb-2">
+                        <a href="mailto:kontakt@printzone3d.pl">kontakt@printzone3d.pl</a>
+                    </div>
+                    <div class="text-gray-400 text-sm">
+                        Kraków, Polska
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for order confirmation -->
+    <div id="order-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full">
+            <div class="text-center">
+                <svg class="mx-auto h-12 w-12 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-900 mt-4">Zamówienie przyjęte!</h3>
+                <p class="text-gray-600 mt-2">Dziękujemy za złożenie zamówienia. Skontaktujemy się z Tobą wkrótce.</p>
+                <button id="close-modal" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md text-base font-medium transition duration-300">
+                    Zamknij
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Form submission
+        const customOrderForm = document.getElementById('custom-order-form');
+        const orderModal = document.getElementById('order-modal');
+        const closeModal = document.getElementById('close-modal');
+        
+        customOrderForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            orderModal.classList.remove('hidden');
+        });
+        
+        closeModal.addEventListener('click', () => {
+            orderModal.classList.add('hidden');
+        });
+        
+        // Add to cart functionality
+        const addToCartButtons = document.querySelectorAll('.product-card button');
+        
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // In a real application, this would add the product to the cart
+                alert('Produkt dodany do koszyka!');
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93a7eba8d0d0bf36',t:'MTc0NjM2MDg5NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+</body></html>
